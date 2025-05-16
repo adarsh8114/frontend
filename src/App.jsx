@@ -21,7 +21,7 @@ function App() {
 
   const fetchHistory = async (id) => {
     try {
-      const res = await axios.get(`http://localhost:5001/api/chat/history/${id}`);
+      const res = await axios.get(`https://backend-1-1p8a.onrender.com/api/chat/history/${id}`);
       setMessages(res.data);
     } catch (err) {
       console.error('Failed to fetch history', err);
@@ -36,7 +36,7 @@ function App() {
     setLoading(true);
 
     try {
-      const res = await axios.post('http://localhost:5001/api/chat', {
+      const res = await axios.post('https://backend-1-1p8a.onrender.com/api/chat', {
         sessionId,
         message: input
       });
@@ -50,7 +50,7 @@ function App() {
 
   const resetSession = async () => {
     try {
-      await axios.post(`http://localhost:5001/api/chat/reset/${sessionId}`);
+      await axios.post(`https://backend-1-1p8a.onrender.com/api/chat/reset/${sessionId}`);
       const newId = uuidv4();
       localStorage.setItem('sessionId', newId);
       setSessionId(newId);
