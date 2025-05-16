@@ -1,12 +1,45 @@
-# React + Vite
+# 🧠 RAG News Chatbot – Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the **frontend** of the RAG-powered chatbot built with **React** and **Tailwind CSS**. It interacts with a FastAPI backend to retrieve contextual answers from a news corpus.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ⚙️ Tech Stack
 
-## Expanding the ESLint configuration
+- **React** – JavaScript frontend framework
+- **Tailwind CSS** – Utility-first CSS framework
+- **Axios** – For making API calls
+- **UUID** – To track user sessions
+- **Vite** – Fast React dev server
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🚀 Features
+
+- Clean, responsive chat UI.
+- Stores session ID in browser `localStorage`.
+- Displays past messages and streaming responses.
+- Reset session functionality.
+- Handles loading state when bot is "typing".
+
+---
+
+## 📦 Setup Instructions
+
+### 1. Navigate to frontend folder
+
+```bash
+cd frontend
+```
+### 2. Install dependencies
+```bash
+
+npm install
+```
+### 3. Run the development server
+
+```bash
+
+npm run dev
+```
+
